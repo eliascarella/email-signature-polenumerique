@@ -1,11 +1,6 @@
 @font-face {
-    font-family: "PP Agrandir";
+    font-family: "PP Agrandir Wide";
     src: url("fonts/PPAgrandir-WideRegular.otf") format("opentype");
     font-weight: 400;
     font-stretch: expanded;
   }
-  
-  body {
-    font-family: "PP Agrandir", sans-serif;
-  }
-  
