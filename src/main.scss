@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "PP Agrandir";
+    src: url("src/fonts/PPAgrandir-WideRegular.otf") format("opentype");
+    font-weight: 400;
+    font-stretch: expanded;
+  }
+*{
+    margin:0;
+    padding:0;
+    font-family: "PP Agrandir Wide";
+    line-height: 1;
+}
+td{
+    border: solid 1px black;
+}
+.firstRow{
+        td{
+            vertical-align: bottom;
+        }
+}
+
+table{
+    tr{
+        td:first-child{
+            width:526px;
+        }
+    }
+}
+.name{
+    font-size: 59.81px;
+    line-height: 0.7;
+    font-stretch:wider;
+}
+.fonction .telephone .email{
+    font-size: 25.64px;
+}
+
+.footerText{
+        font-size:11.85px;
+}
+
+.secondaryTable{
+    tr{
+        td:first-child{
+            width:167px;
+        }
+        td:last-child{
+             p,a{
+                margin-left:36.14px;
+            }
+        }
+    }
+}
