@@ -1,46 +1,78 @@
-@font-face {
-  font-family: "PP";
-  src: url("https://github.com/eliascarella/email-signature-polenumerique/blob/main/src/fonts/PPAgrandir-WideRegular.otf?raw=true") format("opentype");
-}
-
-* {
+body {
   margin: 0;
   padding: 0;
-  font-family: "PP";
   line-height: 1;
+  color: black;
+  font-family: 'Roboto Mono', monospace;
 }
 
-td {
-  border: solid 1px black;
+.main {
+  margin-top: 20px;
+}
+
+table {
+  margin-left: 10px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+p, a, span {
+  text-transform: uppercase;
+}
+
+.headerSpacer {
+  height: 30px;
 }
 
 .firstRow td {
-  vertical-align: bottom;
-}
-
-table tr td:first-child {
-  width: 526px;
+  vertical-align: baseline;
 }
 
 .name {
-  font-size: 59.81px;
-  line-height: 0.7;
+  font-family: "PP Agrandir Wide", helvetica, sans;
+  font-size: 29.9px;
+  line-height: 1;
+  text-transform: none;
   font-stretch: wider;
 }
 
-.fonction .telephone .email {
-  font-size: 25.64px;
+.fonction, .telephone, .email {
+  font-size: 12.82px;
+}
+
+.fonction {
+  letter-spacing: -0.5;
+  font-weight: 500;
+}
+
+.contact {
+  margin-top: 5px;
+  margin-left: 0px;
+}
+
+.contact td {
+  vertical-align: bottom;
+}
+
+.spacer {
+  height: 21.33px;
 }
 
 .footerText {
-  font-size: 11.85px;
+  font-size: 8.89px;
+  line-height: 1;
 }
 
-.secondaryTable tr td:first-child {
-  width: 167px;
+.secondaryTable {
+  margin: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
 }
 
-.secondaryTable tr td:last-child p, .secondaryTable tr td:last-child a {
+.secondaryTable td:last-child p, .secondaryTable td:last-child a, .secondaryTable td:nth-child(2) p, .secondaryTable td:nth-child(2) a {
   margin-left: 36.14px;
 }
 /*# sourceMappingURL=main.css.map */
