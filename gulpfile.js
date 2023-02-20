@@ -23,7 +23,7 @@ const cleanScss = function(){
 }
 
 const html = function(){
-        return gulp.src('./src/emmanuelcuenod.html')
+        return gulp.src('./src/paolagazzani.html')
         .pipe(inlineCss({
             removeLinkTags: false
         }))
