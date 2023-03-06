@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     inlineCss = require('gulp-inline-css'),
     gulpTemplate = require('gulp-template')
     stripComments = require('gulp-strip-comments')
-    replace = require('gulp-replace');
+    replace = require('gulp-replace')
+    htmlAccents = require('gulp-html-accents');
 
 
 
@@ -35,6 +36,7 @@ const html = function(){
         // )
         .pipe(stripComments())
         .pipe(replace('<link rel="stylesheet" href="main.css">',''))
+        .pipe(htmlAccents())
         .pipe(gulp.dest("./dist/"))
 }
 exports.default = gulp.series(cleanScss,html);
