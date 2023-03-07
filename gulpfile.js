@@ -8,11 +8,13 @@ var gulp = require('gulp'),
     stripComments = require('gulp-strip-comments')
     replace = require('gulp-replace')
     htmlAccents = require('gulp-html-accents');
-
+const dayjs = require('dayjs')
 
 
 var data = require('./data.json')
+var date = dayjs().format("YYYYMMDD-HH[h]mm")
 
+var htmlSrc = ['./src/emmanuelcuenod.html','./src/paolagazzini']
 const cleanScss = function(){
     return gulp.src('./src/main.scss')
         .pipe(sass().on('error', sass.logError))
@@ -24,9 +26,10 @@ const cleanScss = function(){
 }
 
 const html = function(){
-        return gulp.src('./src/paolagazzani.html')
+        return gulp.src(['./src/emmanuelcuenod.html','./src/paolagazzani.html'])
         .pipe(inlineCss({
-            removeLinkTags: false
+            removeLinkTags: true,
+            removeStyleTags: false 
         }))
         //.pipe(gulpTemplate({nom:d.nom, fonction:d.fonction}))
         // .pipe(rename(function(path){
@@ -35,8 +38,11 @@ const html = function(){
         // })
         // )
         .pipe(stripComments())
-        .pipe(replace('<link rel="stylesheet" href="main.css">',''))
+      .pipe(replace('<link rel="stylesheet" href="main.css">',''))
         .pipe(htmlAccents())
+        .pipe(rename(function(path){
+            path.basename += date
+        }))
         .pipe(gulp.dest("./dist/"))
 }
 exports.default = gulp.series(cleanScss,html);

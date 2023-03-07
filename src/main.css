@@ -12,6 +12,7 @@ body {
 
 table {
   margin-left: 10px;
+  border-collapse: collapse;
 }
 
 a {
@@ -33,14 +34,14 @@ p, a, span {
 
 .name {
   font-family: "PP Agrandir Wide", helvetica, sans;
-  font-size: 29.9px;
+  font-size: 28.9px;
   line-height: 1;
   text-transform: none;
   font-stretch: wider;
 }
 
 .fonction, .telephone, .email {
-  font-size: 12.82px;
+  font-size: 9.82px;
 }
 
 .fonction {
@@ -70,6 +71,7 @@ p, a, span {
   margin: 0px;
   margin-top: 0px;
   margin-left: 0px;
+  overflow-x: auto;
 }
 
 .secondaryTable td:last-child p, .secondaryTable td:last-child a, .secondaryTable td:nth-child(2) p, .secondaryTable td:nth-child(2) a {

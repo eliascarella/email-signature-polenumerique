@@ -14,7 +14,9 @@ body{
 table{
     //border: solid 1px black;
     margin-left:10px;
+    border-collapse: collapse;
 }
+
 a {
     color: black;
     text-decoration: none;
@@ -30,13 +32,13 @@ p, a, span{text-transform: uppercase;}
 }
 .name{
     font-family: "PP Agrandir Wide", helvetica, sans;
-    font-size: 29.9px;
+    font-size: 28.9px;
     line-height: 1;
     text-transform: none;
     font-stretch:wider;
 }
 .fonction, .telephone, .email{
-    font-size:12.82px;
+    font-size:9.82px;
 }
 
 .fonction{
@@ -69,6 +71,7 @@ p, a, span{text-transform: uppercase;}
     margin:0px;
     margin-top:0px;
     margin-left:0px;
+    overflow-x: auto;
         td:last-child, td:nth-child(2){
              p,a{
                 margin-left:36.14px;
